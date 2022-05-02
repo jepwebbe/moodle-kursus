@@ -1,0 +1,14 @@
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    background-color: blue;
+
+
+    a {
+        text-decoration: none;
+        color: pink;
+        font-size: 35px;
+    }
+}

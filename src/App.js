@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
+import { Header } from './components/Header/Header';
+import { Frontpage } from './pages/frontpage/Frontpage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+
+      <Routes>
+        <Route path="frontpage" element={<Frontpage />} />
+        <Route path="/contactpage" />
+        <Route path="/productpage" />
+        <Route path="/loginpage" />
+{/*         <Route path="/">
+          <Navigate to="frontpage"/>
+        </Route> */}
+
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>This is not a place for you!</p>
+            </main>
+      }
+    />
+          
+      </Routes>
+
+    </BrowserRouter>
+
   );
 }
 
 export default App;
+
+/*
+    <div className="App">
+      <Header />
+      <Main />
+      <Footer />
+    </div>*/

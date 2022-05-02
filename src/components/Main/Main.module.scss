@@ -1,0 +1,15 @@
+.container {
+    color: green;
+    h1 {
+        text-align: center;
+    }
+
+    article {
+        display: grid;
+        //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        img {
+            max-width: 100%;
+            height: 200px;
+        }
+    }
+}
