@@ -6,7 +6,6 @@ import {Footer} from "../../components/Footer/Footer"
 export function Frontpage() {
     return ( 
     <div>
-            <Header />
             <Main />
             <Footer />
     </div>
